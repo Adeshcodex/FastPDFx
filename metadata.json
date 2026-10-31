@@ -1,0 +1,6 @@
+{
+  "name": "FastPDFx",
+  "description": "Free, fast, and secure client-side online tools for PDF processing and image editing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
