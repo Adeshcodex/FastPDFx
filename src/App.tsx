@@ -6,6 +6,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { Sidebar } from './components/Sidebar';
+import { AdsterraAd } from './components/AdsterraAd';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -101,6 +102,8 @@ function AppLayout() {
             <Route path="/terms" element={<TermsPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          {/* Adsterra Native Banner - Homepage only */}
+          {location.pathname === '/' && <AdsterraAd />}
 
           {/* Footer inside workspace container */}
           <Footer />
