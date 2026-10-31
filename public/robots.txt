@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://fastpdfx.pages.dev/sitemap.xml
