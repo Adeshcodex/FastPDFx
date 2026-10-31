@@ -671,6 +671,29 @@ export const PdfToWordPage: React.FC = () => {
               </button>
             </div>
 
+            {/* Sponsored Offer - Adsterra Smartlink */}
+            <div className="mt-2 p-5 bg-[#FBF9F4] border border-[#EAE6DE] text-center space-y-3">
+              <p className="text-[10px] font-mono uppercase tracking-widest text-[#605E57]">
+                Sponsored Offer
+              </p>
+
+              <h3 className="font-serif font-bold text-lg text-[#20201D]">
+                Explore a Special Offer
+              </h3>
+
+              <p className="text-xs text-[#605E57]">
+                Support FastPDFx by checking out this optional sponsored offer.
+              </p>
+
+              <a
+                href="https://asiafilm.org/4/efcf8ccc681b58be49d8dbd1634844cc"
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-[#20201D] hover:bg-[#333330] text-[#F5F3ED] text-sm font-serif font-semibold transition-colors"
+              >
+                Visit Sponsored Offer
+              </a>
+            </div>
             {/* Statistics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
               <div className="p-4 bg-[#FBF9F4] border border-[#EAE6DE]">
