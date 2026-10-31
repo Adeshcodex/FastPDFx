@@ -1,29 +1,35 @@
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function AdsterraAd() {
-  useEffect(() => {
-    const containerId = 'container-65b931f2a221c89b0139ca690d1403c0';
+  const adRef = useRef<HTMLDivElement>(null);
 
-    // Prevent duplicate ad scripts
-    const container = document.getElementById(containerId);
+  useEffect(() => {
+    const container = adRef.current;
     if (!container || container.dataset.loaded === 'true') return;
 
     container.dataset.loaded = 'true';
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.setAttribute('data-cfasync', 'false');
-    script.src = 'https://bauval.org/21/65b931f2a221c89b0139ca690d1403c0';
+    (window as any).atOptions = {
+      key: '2a2a57e349b907c6b35f1506c261bdc2',
+      format: 'iframe',
+      height: 250,
+      width: 300,
+      params: {},
+    };
 
-    container.parentElement?.insertBefore(script, container);
+    const script = document.createElement('script');
+    script.src = 'https://bauval.org/22/2a2a57e349b907c6b35f1506c261bdc2';
+    script.async = true;
+
+    container.appendChild(script);
   }, []);
 
   return (
     <div className="w-full flex justify-center my-8">
       <div
-        id="container-65b931f2a221c89b0139ca690d1403c0"
-        className="w-full"
+        ref={adRef}
+        className="min-w-[300px] min-h-[250px] flex justify-center items-center"
       />
     </div>
   );
